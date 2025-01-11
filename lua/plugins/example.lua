@@ -10,7 +10,7 @@ if true then return {
     enabled = false
   },
   {
-    "echasnovski/mini.files",
+    "echasnovski/mini.pairs",
     enabled = false
   },
   {
