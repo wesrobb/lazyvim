@@ -20,3 +20,7 @@ if jit.os == "Windows" then
 
   vim.o.makeprg = "./build.ps1"
 end
+
+if vim.g.neovide or vim.g.nvy then
+  vim.o.guifont = "JetBrainsMonoNL Nerd Font:h14"
+end
