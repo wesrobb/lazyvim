@@ -1,46 +1,9 @@
+if true then
+  return {}
+end
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false
-  },
-  {
-    "folke/noice.nvim",
-    enabled = false
-  },
-  {
-    "echasnovski/mini.pairs",
-    enabled = false
-  },
-  {
-    "echasnovski/mini.files",
-    opts = {
-      options = {
-        use_as_default_explorer = true,
-      }
-    },
-    keys = {
-      {
-        "-",
-        function()
-          require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
-        end,
-        desc = "Open mini.files (Directory of Current File)",
-      },
-      {
-        "<leader>fm",
-        function()
-          require("mini.files").open(vim.uv.cwd(), true)
-        end,
-        desc = "Open mini.files (cwd)",
-      },
-    },
-  }
-} end
-
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
---
 -- In your plugin files, you can:
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
@@ -121,7 +84,7 @@ return {
       init = function()
         require("lazyvim.util").lsp.on_attach(function(_, buffer)
           -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
+          vim.keymap.set("n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
           vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
         end)
       end,
