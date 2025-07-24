@@ -1,7 +1,7 @@
 return {
   {
     "rachartier/tiny-inline-diagnostic.nvim",
-    event = "VeryLazy", -- Or `LspAttach`
+    event = "LspAttach", -- Or `LspAttach`
     priority = 1000, -- needs to be loaded in first
     config = function()
       require("tiny-inline-diagnostic").setup()
@@ -54,10 +54,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = { autoformat = false },
-  },
-  {
-    "folke/persistence.nvim",
-    enabled = false,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
