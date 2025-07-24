@@ -24,3 +24,5 @@ end
 if vim.g.neovide or vim.g.nvy then
   vim.o.guifont = "JetBrainsMonoNL Nerd Font:h14"
 end
+
+vim.g.autoformat = false
