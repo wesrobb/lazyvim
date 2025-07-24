@@ -59,10 +59,6 @@ return {
     },
   },
   {
-    "neovim/nvim-lspconfig",
-    opts = { autoformat = false },
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = false,
   },
