@@ -7,4 +7,5 @@ vim.keymap.set("n", "<leader>r", ":!bash ./run.sh<CR>", { noremap = true, silent
 -- Check if 'pwsh' is executable and set the shell accordingly
 if jit.os == "Windows" then
   vim.keymap.set("n", "<leader>r", ":!pwsh -NoLogo -NoProfile -File ./run.ps1<CR>", { noremap = true, silent = false })
+  vim.keymap.set("n", "<leader>b", ":!pwsh -NoLogo -NoProfile -File ./build.ps1<CR>", { noremap = true, silent = false })
 end
